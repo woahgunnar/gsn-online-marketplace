@@ -1,0 +1,50 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* flex arranges child divs in a row, leaving the elements inside each div to keep their own layout */
+.profile-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.profile-options a {
+  border: 1px solid black;
+  padding: 50px 15px;
+  text-align: center;
+}
