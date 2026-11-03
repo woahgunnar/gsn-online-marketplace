@@ -13,6 +13,7 @@
     <title>Edit Profile</title>
 
     <link rel="stylesheet" href="edit-profile.css" />
+    <script src="edit-profile.js" defer></script>
   </head>
 
   <body>
@@ -24,7 +25,7 @@
       <section class="profile-settings">
         <div class="pfp-settings">
           <strong>Profile picture</strong>
-          <img id="pfp" src="default-pfp.png" alt="Current profile picture" />
+          <img src="default-pfp.png" id="pfp" alt="Current profile picture" />
         </div>
 
         <div class="username-settings">
@@ -37,6 +38,30 @@
           <strong>Gender</strong>
         </div>
       </section>
+
+      <!-- pop up window for when the user wants to change their username -->
+      <!-- includes common restraints for usernames -->
+      <dialog id="username-dialog">
+        <h2>Change username</h2>
+
+        <form id="username-form">
+          <label for="new-username">New username</label>
+          <input
+            type="text"
+            id="new-username"
+            required
+            minlength="3"
+            maxlength="20"
+            pattern="^[a-zA-Z0-9_]+$"
+          />
+
+          <!-- room to display message when username doesn't meet requirements -->
+          <p id="username-message"></p>
+
+          <button type="button" id="cancel-username">Back</button>
+          <button type="submit" id="confirm-username">Confirm</button>
+        </form>
+      </dialog>
     </main>
   </body>
 </html>

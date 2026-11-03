@@ -25,16 +25,11 @@ nav {
   gap: 20px;
 }
 
-.profile-picture {
+#pfp {
   width: 150px;
   height: 150px;
-  border: 2px solid black;
   border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  object-fit: cover;
 }
 
 .profile-options {
