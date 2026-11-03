@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--
+    Milestone 2
+    Author: Gunnar Ashworth
+    File: edit-profile.html
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gunnar Ashworth" />
+    <meta name="description" content="profile settings page for the user" />
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet" href="edit-profile.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Edit Profile</h1>
+    </header>
+
+    <main>
+      <section class="profile-settings">
+        <div class="pfp-settings">
+          <strong>Profile picture</strong>
+          <img id="pfp" src="default-pfp.png" alt="Current profile picture" />
+        </div>
+
+        <div class="username-settings">
+          <strong>Username</strong>
+          <span id="username">Username</span>
+          <button type="button" id="change-username">Change</button>
+        </div>
+
+        <div class="gender-settings">
+          <strong>Gender</strong>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
