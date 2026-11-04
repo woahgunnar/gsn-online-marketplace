@@ -1,0 +1,262 @@
+
+/* Page container */
+
+.registration_page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+.registration_page header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Logo */
+
+.registration_page .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 16rem;
+    height: 9rem;
+
+    margin: 1.5rem auto 0;
+    text-decoration: none;
+}
+
+/* Navbar */
+
+.registration_page nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+    width: 100%;
+    min-height: 2.5rem;
+    box-sizing: border-box;
+}
+
+.registration_page nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 1 8rem;
+    min-width: 0;
+
+    padding: 0.65rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Main */
+
+.registration_page main {
+    display: grid;
+
+    grid-template-columns: 1.1fr 1fr;
+
+    width: 100%;
+    flex: 1;
+    min-height: 32rem;
+    box-sizing: border-box;
+}
+
+/* Image */
+
+.registration_page .registration_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 32rem;
+
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Panel */
+
+.registration_page .registration_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.registration_page .registration_panel h1 {
+    width: 100%;
+    margin: 0 0 2rem;
+
+    text-align: center;
+}
+
+/* Form */
+
+.registration_page .registration_form {
+    display: grid;
+
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1rem;
+
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Individual form fields */
+
+.registration_page .registration_field {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    gap: 0.35rem;
+}
+
+/* Username spans the entire form */
+
+.registration_page .registration_field:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+/* Email and phone */
+
+.registration_page .registration_field:nth-child(2),
+.registration_page .registration_field:nth-child(3) {
+    grid-column: span 3;
+}
+
+/* Password and confirmation */
+
+.registration_page .registration_field:nth-child(4),
+.registration_page .registration_field:nth-child(5) {
+    grid-column: span 3;
+}
+
+/* Country, state, and address */
+
+.registration_page .registration_field:nth-child(6) {
+    grid-column: span 1;
+}
+
+.registration_page .registration_field:nth-child(7) {
+    grid-column: span 1;
+}
+
+.registration_page .registration_field:nth-child(8) {
+    grid-column: span 4;
+}
+
+/* Labels */
+
+.registration_page .registration_field label {
+    display: block;
+    width: 100%;
+}
+
+/* Input elements */
+
+.registration_page .registration_field input,
+.registration_page .registration_field select {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 2rem;
+
+    padding: 0.35rem;
+    box-sizing: border-box;
+}
+
+/* Error message */
+
+.registration_page .registration_error {
+    display: block;
+    width: 100%;
+}
+
+/*submit */
+
+.registration_page .registration_action {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.registration_page .registration_submit {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/* Response message*/
+
+.registration_page .registration_response {
+    grid-column: 1 / -1;
+    width: 100%;
+    text-align: center;
+}
+
+/*responsive*/
+
+@media (max-width: 600px) {
+
+    .registration_page .logo {
+        width: 12rem;
+        height: 7rem;
+    }
+
+    .registration_page nav {
+        flex-wrap: wrap;
+    }
+
+    .registration_page nav a {
+        flex: 1 1 30%;
+    }
+
+    .registration_page .registration_form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .registration_page .registration_field:nth-child(1),
+    .registration_page .registration_action,
+    .registration_page .registration_response {
+        grid-column: 1 / -1;
+    }
+
+    .registration_page .registration_field:nth-child(2),
+    .registration_page .registration_field:nth-child(3),
+    .registration_page .registration_field:nth-child(4),
+    .registration_page .registration_field:nth-child(5) {
+        grid-column: span 1;
+    }
+
+    .registration_page .registration_field:nth-child(6),
+    .registration_page .registration_field:nth-child(7) {
+        grid-column: span 1;
+    }
+
+    .registration_page .registration_field:nth-child(8) {
+        grid-column: 1 / -1;
+    }
+}
