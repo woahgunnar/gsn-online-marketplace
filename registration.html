@@ -13,11 +13,13 @@
 		<title>Register New User</title>
 	
 		<link rel="stylesheet" href="registration.css" />
-		<link rel="stylesheet" href="/*UNIVERSAL STYLESHEET GOES HERE*/" />
+		<link rel="stylesheet" href="" />
+		<script src="registration.js" defer></script>
+		
 	</head>
 	
 	<body>
-		 <div class="registration_page">
+		 <div class="registration_page" nobalidate>
 			<header>
 				<a class="logo" href="logo.png" aria-label="Site homepage">logo</a>
 
@@ -67,8 +69,8 @@
 					</div>
 
 					<div class="registration_field">
-						<label for="confirm_password">Confirm Password</label>
-						<input id=confirm_password" name ="confirmPassword" type="password"
+						<label for="confirmPassword">Confirm Password</label>
+						<input id="confirmPassword" name ="confirmPassword" type="password"
 							autocomplete="new_password" required>
 					</div>
 			
@@ -91,7 +93,7 @@
 
 					<div class="registration_field">
 						<label for="address">Address</label>
-						<input id="address" name="address" type="text
+						<input id="address" name="address" type="text"
 							autocomplete="street_address" placeholder="Optional">
 					</div>
 					
