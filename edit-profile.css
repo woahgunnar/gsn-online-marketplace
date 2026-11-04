@@ -1,12 +1,59 @@
 body {
+  background-image: url("Background.jpg");
   font-family: "Times New Roman", Times, serif;
-  max-width: 800px;
-  margin: 0 auto;
+  margin: 0;
   padding: 20px;
 }
 
 header {
   text-align: center;
+}
+
+header h1 {
+  background-image: url("BoxBackground.jpg");
+  box-shadow: 0 3px 20px black;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+main > a {
+  display: inline-block;
+  background-image: url("LinkBoxBackground.jpg");
+  color: aliceblue;
+  text-decoration: none;
+  border-radius: 15px;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 20px black;
+}
+
+.profile-settings {
+  background-image: url("BoxBackground.jpg");
+  box-shadow: 0 3px 20px black;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+.profile-settings > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #555;
+}
+
+.profile-settings > div:last-child {
+  border-bottom: none;
+}
+
+.profile-settings strong {
+  min-width: 150px;
 }
 
 #pfp {
@@ -16,12 +63,40 @@ header {
   object-fit: cover;
 }
 
-/* '> div' applies this styling to each div under the profile-settings class */
-.profile-settings > div {
+button {
+  background-image: url("LinkBoxBackground.jpg");
+  color: aliceblue;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.username-settings button {
+  margin-left: auto;
+}
+
+dialog {
+  background-image: url("BoxBackground.jpg");
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 3px 20px black;
+  padding: 25px;
+  width: min(400px, 90%);
+  box-sizing: border-box;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#username-form {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 0;
-  border-bottom: 1px solid #ccc;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#new-username {
+  padding: 10px;
+  font: inherit;
 }
