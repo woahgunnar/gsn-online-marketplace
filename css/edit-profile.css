@@ -1,5 +1,5 @@
 body {
-  background-image: url("Background.jpg");
+  background-image: url("../images/background-stone.jpg");
   font-family: "Times New Roman", Times, serif;
   margin: 0;
   padding: 20px;
@@ -10,7 +10,7 @@ header {
 }
 
 header h1 {
-  background-image: url("BoxBackground.jpg");
+  background-image: url("../images/background-box.jpg");
   box-shadow: 0 3px 20px black;
   border-radius: 30px;
   padding: 20px;
@@ -23,7 +23,7 @@ main {
 
 main > a {
   display: inline-block;
-  background-image: url("LinkBoxBackground.jpg");
+  background-image: url("../images/background-link-box.jpg");
   color: aliceblue;
   text-decoration: none;
   border-radius: 15px;
@@ -33,7 +33,7 @@ main > a {
 }
 
 .profile-settings {
-  background-image: url("BoxBackground.jpg");
+  background-image: url("../images/background-box.jpg");
   box-shadow: 0 3px 20px black;
   border-radius: 30px;
   padding: 25px;
@@ -64,7 +64,7 @@ main > a {
 }
 
 button {
-  background-image: url("LinkBoxBackground.jpg");
+  background-image: url("../images/background-link-box.jpg");
   color: aliceblue;
   border: none;
   border-radius: 15px;
@@ -77,7 +77,7 @@ button {
 }
 
 dialog {
-  background-image: url("BoxBackground.jpg");
+  background-image: url("../images/background-box.jpg");
   border: none;
   border-radius: 20px;
   box-shadow: 0 3px 20px black;
