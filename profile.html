@@ -12,64 +12,71 @@
     <meta name="description" content="profile page for the user" />
     <title>User Profile</title>
 
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/profile.css" />
   </head>
 
   <body>
     <header>
-      <!-- navigation menu -->
-      <nav>
-        <a href="registration.html"
-          >Login/Signup<br /><img
-            src="images/icon-scroll.jpg"
-            width="50"
-            height="50"
-          />
-        </a>
-        <a href="index.html">Browse</a>
-        <a href="messages.html"
-          >Messages<br /><img src="images/icon-chat.jpg" width="50" height="50"
-        /></a>
-        <a href="profile.html"
-          >Profile<br /><img
-            src="images/icon-profile.png"
-            width="50"
-            height="50"
-          />
-        </a>
-        <a href="support.html">Support</a>
-        <a href="saved.html">Saved Items</a>
-      </nav>
+      <div class="header-content">
+        <div class="logo-window">
+          <h1>
+            <a href="index.html"
+              ><img src="images/logo.jpg" width="300" height="150"
+            /></a>
+          </h1>
+        </div>
 
-      <div class="logo-window">
-        <h1><img src="images/logo.jpg" width="300" height="150" /></h1>
+        <!-- navigation menu -->
+        <nav>
+          <a href="registration.html">Login/Signup</a>
+          <a href="index.html">Browse</a>
+          <a href="messages.html">Messages</a>
+          <a href="profile.html">Profile</a>
+          <a href="cart.html">Cart</a>
+        </nav>
       </div>
     </header>
 
-    <main>
-      <section class="profile-info">
-        <h2>My Profile</h2>
+    <main class="wooden-frame">
+      <div class="parchment-panel">
+        <img src="images/iron-rivet.png" class="nail" alt="" />
 
-        <div class="profile-picture">
+        <section class="profile-info">
+          <h2>Your Olde-Catalog Ledger</h2>
+
           <img
             src="images/default-pfp.png"
             id="pfp"
             alt="Current profile picture"
           />
-        </div>
 
-        <div>
-          <h3>Username</h3>
-          <a href="edit-profile.html">Edit Profile</a>
-        </div>
-      </section>
+          <div class="profile-details">
+            <h3>Username</h3>
+            <p>Marketplace Member</p>
+          </div>
 
-      <nav class="profile-options">
-        <a href="purchases.html">Purchases</a>
-        <a href="listings.html">My Listings</a>
-        <a href="reviews.html">Reviews</a>
-        <a href="settings.html">Account Settings</a>
-      </nav>
+          <a href="edit-profile.html" class="leather-button">
+            Edit Profile
+          </a>
+        </section>
+
+        <nav class="profile-navigation" aria-label="profile navigation">
+          <a href="purchases.html">Purchases</a>
+          <a href="listings.html">My Listings</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="saved.html">Saved Items</a>
+        </nav>
+      </div>
     </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 Olde-Catalog</p>
+        <a href="support.html">Help & Support</a>
+      </div>
+    </footer>
   </body>
 </html>

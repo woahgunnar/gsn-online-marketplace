@@ -1,51 +1,14 @@
-body {
-  background-image: url("../images/background-stone.jpg");
-  font-family: "Times New Roman", Times, serif;
-  margin: 0;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-}
-
-header h1 {
-  background-image: url("../images/background-box.jpg");
-  box-shadow: 0 3px 20px black;
-  border-radius: 30px;
-  padding: 20px;
-}
-
-main {
-  max-width: 900px;
-  margin: 30px auto;
-}
-
-main > a {
-  display: inline-block;
-  background-image: url("../images/background-link-box.jpg");
-  color: aliceblue;
-  text-decoration: none;
-  border-radius: 15px;
-  padding: 12px 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 3px 20px black;
-}
-
 .profile-settings {
-  background-image: url("../images/background-box.jpg");
-  box-shadow: 0 3px 20px black;
-  border-radius: 30px;
-  padding: 25px;
+  margin-top: 20px;
 }
 
 .profile-settings > div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
-  padding: 20px 0;
-  border-bottom: 1px solid #555;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 2px solid #a98450;
 }
 
 .profile-settings > div:last-child {
@@ -53,43 +16,57 @@ main > a {
 }
 
 .profile-settings strong {
-  min-width: 150px;
+  min-width: auto;
 }
 
-#pfp {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+.settings-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 35px;
 }
 
-button {
-  background-image: url("../images/background-link-box.jpg");
-  color: aliceblue;
-  border: none;
-  border-radius: 15px;
-  padding: 12px 20px;
-  cursor: pointer;
+.settings-header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  white-space: nowrap;
+  font-size: 36px;
 }
 
-.username-settings button {
-  margin-left: auto;
-}
-
+/* dialog for changing username */
+/* backdrop will darken and blur the page behind the dialog */
 dialog {
-  background-image: url("../images/background-box.jpg");
+  width: min(650px, 90%);
+  max-height: 90vh;
+  padding: 20px;
+
+  background-image: url("../images/background-dark-wood.png");
+  background-position: center;
+
   border: none;
-  border-radius: 20px;
+  border-radius: 8px;
   box-shadow: 0 3px 20px black;
-  padding: 25px;
-  width: min(400px, 90%);
-  box-sizing: border-box;
+
+  overflow-y: auto;
+}
+
+dialog .parchment-panel {
+  padding: 40px;
+}
+
+dialog h2 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 30px;
 }
 
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+/* form for changing username */
 #username-form {
   display: flex;
   flex-direction: column;

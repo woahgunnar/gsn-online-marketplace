@@ -1,102 +1,68 @@
-/* forces all boxes to have the equal length */
-.logo-window,
-.profile-info,
-.profile-options {
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url("../images/background-stone.jpg");
-  font-family: "Times New Roman", Times, serif;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  text-align: center;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-nav {
-  background-image: url("../images/background-banner.jpg");
-  box-shadow: 0 3px 20px black;
-  border-radius: 30px;
-  border: 15px black;
-  padding: 8px 15px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  justify-content: space-between;
-}
-
-nav a {
-  background-image: url("../images/background-link-box.jpg");
-  height: 75px;
-  width: 250px;
-  box-shadow: 0 3px 20px black;
-  text-decoration: none;
-  border-radius: 15px;
-  float: left;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 15px 16px;
-  font-size: 30px;
-  color: aliceblue;
-}
-
-.logo-window {
-  background-image: url("../images/background-box.jpg");
-  box-shadow: 0 3px 20px black;
-  border-radius: 30px;
-  border: 15px black;
-  padding: 10px;
-  margin-top: 10px;
-  max-width: 300;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* flex arranges child divs in a row, leaving the elements inside each div to keep their own layout */
+/* profile information */
 .profile-info {
-  background-image: url("../images/background-box.jpg");
-  box-shadow: 0 3px 20px black;
-  border-radius: 30px;
-  border: 15px black;
-  padding: 10px;
-  margin-top: 10px;
-  max-width: 300;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
+
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: 2px solid #a98450;
 }
 
-#pfp {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+/* profile heading */
+.profile-info h2 {
+  width: 100%;
+  margin: 0 0 20px;
 
-.profile-options {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.profile-options a {
-  border: 1px solid black;
-  padding: 50px 15px;
   text-align: center;
+  font-size: 36px;
+}
+
+/* username and member information */
+.profile-details {
+  flex: 1;
+}
+
+.profile-details h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+}
+
+.profile-details p {
+  margin: 0;
+}
+
+/* profile option cards */
+.profile-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.profile-navigation a {
+  flex: 0 0 calc(50% - 20px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 150px;
+  padding: 20px;
+
+  background-color: #f0d6aa;
+  border: 2px solid #997446;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px #a98b61;
+
+  color: #382415;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-navigation a:hover {
+  background-color: #dfba7e;
+  transform: translateY(-2px);
 }
