@@ -2,27 +2,32 @@
 //Links to the products and images have temporary placeholders for now.
 const recommended = [
   {
-    name: "Goody gumdrops:",
+    name: "Goody gumdrops",
     link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
     img: "images/product-placeholder.gif",
   },
   {
-    name: "Goober guts:",
+    name: "Goober guts",
     link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
     img: "images/product-placeholder.gif",
   },
   {
-    name: "Scooby Snacks:",
+    name: "Scooby Snacks",
     link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
     img: "images/product-placeholder.gif",
   },
   {
-    name: "Krabby patty:",
+    name: "Krabby patty",
     link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
     img: "images/product-placeholder.gif",
   },
   {
-    name: "Shrek bath water:",
+    name: "Shrek bath water",
+    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    img: "images/product-placeholder.gif",
+  },
+  {
+    name: "placeholder",
     link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
     img: "images/product-placeholder.gif",
   },

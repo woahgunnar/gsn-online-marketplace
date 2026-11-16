@@ -1,115 +1,69 @@
-body {
-  background-image: url("../images/background-stone.jpg");
-  font-family: "Times New Roman", Times, serif;
-  margin: 0px;
-}
-
-.page-container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto;
-  padding: 10px;
-  align-items: center;
-  grid-template-columns: auto;
-  min-height: 100px;
-}
-
-.search-window {
-  background-image: url("../images/background-box.jpg");
-  box-shadow: 0 3px 20px black;
-  border-radius: 30px;
-  border: 15px black;
-  padding: 10px;
-  max-width: 300;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.search-heading {
   text-align: center;
+  padding-bottom: 25px;
 }
 
-.navbar-window {
-  background-image: url("../images/background-banner.jpg");
-  box-shadow: 0 3px 20px black;
-  border: 15px black;
-  padding: 8px 15px;
+.catalog-search {
   display: flex;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  justify-content: space-between;
-}
-
-.imgformat {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 10px solid rgb(32, 24, 3);
-  border-radius: 15px;
-  width: 50%;
-  padding: 5px;
-}
-
-.navbar-window a {
-  background-image: url("../images/background-link-box.jpg");
-  height: 75px;
-  width: 250px;
-  box-shadow: 0 3px 20px black;
-  text-decoration: none;
-  border-radius: 15px;
-  float: left;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 15px 16px;
-  font-size: 30px;
-  color: aliceblue;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 45px;
+  margin-bottom: 1px;
+  border-bottom: 2px solid #a98450;
 }
 
-#Search {
-  field-sizing: content;
+#search {
   width: 500px;
   font-size: 24px;
   height: 50px;
   padding: 10px;
-  border-radius: 15px;
-  box-shadow: 0 3px 20px black;
-}
 
-.label {
-  font-size: 30px;
-}
+  background-color: #f0ebe3;
+  color: #382415;
 
-.search-button {
-  border-radius: 15px;
-  box-shadow: 0 3px 20px black;
-}
-
-.browse-catalog {
-  white-space: nowrap;
-  overflow: auto;
-  text-align: center;
-}
-
-.browse-catalog a {
-  display: inline-block;
-  background-image: url("../images/background-product.jpg");
+  border: 2px solid #9b7844;
   border-radius: 5px;
-  border-color: black;
-  border-width: 5px;
+  box-shadow: 0 3px 6px #63411e;
+}
+
+/* listings that will horizontally scroll */
+.browse-catalog {
+  display: flex;
+  gap: 20px;
+  padding: 0 5px 20px;
+
+  overflow-x: auto;
+  scroll-snap-type: x;
+}
+
+/* product listing cards */
+/* uses flex again to arrange the image and text vertically */
+.browse-catalog a {
+  flex: 0 0 250px;
+  min-height: 350px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+
+  background-color: #f0d6aa;
+  border: 2px solid #997446;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px #a98b61;
+
+  color: #382415;
+  text-decoration: none;
+  text-align: center;
   font-size: 24px;
-  height: 350px;
-  width: 200px;
-  vertical-align: top;
   text-align: center;
 }
 
+/* product listing images */
 .browse-catalog img {
-  display: block;
   height: 150px;
   width: 150px;
-  margin: 10px;
   object-fit: contain;
 }

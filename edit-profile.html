@@ -16,22 +16,24 @@
     <link rel="stylesheet" href="css/header-footer.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/edit-profile.css" />
+
     <script src="js/edit-profile.js" defer></script>
   </head>
 
   <body>
+    <!-- HEADER AND NAVIGATION -->
     <header>
       <div class="header-content">
         <div class="logo-window">
           <h1>
             <a href="index.html"
-              ><img src="images/logo.jpg" width="300" height="150"
+              ><img src="images/logo.jpg" width="300" height="150" alt="logo"
             /></a>
           </h1>
         </div>
 
         <!-- navigation menu -->
-        <nav>
+        <nav aria-label="Main navigation">
           <a href="registration.html">Login/Signup</a>
           <a href="index.html">Browse</a>
           <a href="messages.html">Messages</a>
@@ -41,9 +43,12 @@
       </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main class="wooden-frame">
       <div class="parchment-panel">
-        <img src="images/iron-rivet.png" class="nail" alt="" />
+        <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+        <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
+
         <div class="settings-header">
           <h2>Edit Your Ledger</h2>
           <a href="profile.html" class="leather-button">Back</a>
@@ -72,7 +77,8 @@
         <!-- includes common restraints for usernames -->
         <dialog id="username-dialog">
           <div class="parchment-panel">
-            <img src="images/iron-rivet.png" class="nail" alt="" />
+            <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+            <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
             <h2>Change username</h2>
 
             <form id="username-form">
@@ -105,6 +111,7 @@
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
       <div class="footer-content">
         <p>&copy; 2026 Olde-Catalog</p>

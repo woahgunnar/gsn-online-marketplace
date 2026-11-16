@@ -19,18 +19,19 @@
   </head>
 
   <body>
+    <!-- HEADER AND NAVIGATION -->
     <header>
       <div class="header-content">
         <div class="logo-window">
           <h1>
             <a href="index.html"
-              ><img src="images/logo.jpg" width="300" height="150"
+              ><img src="images/logo.jpg" width="300" height="150" alt="logo"
             /></a>
           </h1>
         </div>
 
         <!-- navigation menu -->
-        <nav>
+        <nav aria-label="Main navigation">
           <a href="registration.html">Login/Signup</a>
           <a href="index.html">Browse</a>
           <a href="messages.html">Messages</a>
@@ -40,29 +41,33 @@
       </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main class="wooden-frame">
       <div class="parchment-panel">
-        <img src="images/iron-rivet.png" class="nail" alt="" />
+        <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+        <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
 
+        <!-- profile info container -->
         <section class="profile-info">
           <h2>Your Olde-Catalog Ledger</h2>
 
+          <!-- profile picture -->
           <img
             src="images/default-pfp.png"
             id="pfp"
             alt="Current profile picture"
           />
 
+          <!-- profile details -->
           <div class="profile-details">
             <h3>Username</h3>
             <p>Marketplace Member</p>
           </div>
 
-          <a href="edit-profile.html" class="leather-button">
-            Edit Profile
-          </a>
+          <a href="edit-profile.html" class="leather-button"> Edit Profile </a>
         </section>
 
+        <!-- nav menu for profile-related pages -->
         <nav class="profile-navigation" aria-label="profile navigation">
           <a href="purchases.html">Purchases</a>
           <a href="listings.html">My Listings</a>
@@ -72,6 +77,7 @@
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer>
       <div class="footer-content">
         <p>&copy; 2026 Olde-Catalog</p>

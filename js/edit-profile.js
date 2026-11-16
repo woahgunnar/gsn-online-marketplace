@@ -29,7 +29,7 @@ usernameForm.addEventListener("input", function () {
   } else if (newUsername.validity.tooShort) {
     usernameMessage.textContent = "Username must be at least 3 characters.";
   } else if (newUsername.validity.tooLong) {
-    usernameMessage.textContent = "Username cannot be more than 20 characters.";
+    usernameMessage.textContent = "Username cannot be more than 24 characters.";
   } else if (newUsername.validity.patternMismatch) {
     usernameMessage.textContent =
       "Username can only contain letters, numbers, and underscores.";

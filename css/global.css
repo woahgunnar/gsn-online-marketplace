@@ -6,6 +6,7 @@
 /* reserves space for the scrollbar to prevent layout shifts */
 html {
   scrollbar-gutter: stable;
+  scrollbar-color: #63411e #f0e5d4;
 }
 
 body {
