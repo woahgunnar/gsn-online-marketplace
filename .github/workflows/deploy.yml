@@ -16,6 +16,8 @@ jobs:
 
       - name: Sync files to InfinityFree
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        env:
+          NODE_OPTIONS: "--tls-min-v1.2 --tls-max-v1.2 --tls-cipher-list=DEFAULT@SECLEVEL=1"
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
