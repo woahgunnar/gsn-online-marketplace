@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gunnar Ashworth" />
+    <meta name="description" content="search page" />
+    <title>Olde-Catalog - Search</title>
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header-footer.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
+    <script src="js/search.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER AND NAVIGATION -->
+    <header>
+      <div class="header-content">
+        <div class="logo-window">
+          <h1>
+            <a href="index.html"
+              ><img src="images/logo.jpg" width="300" height="150" alt="logo"
+            /></a>
+          </h1>
+        </div>
+
+        <!-- navigation menu -->
+        <nav aria-label="Main navigation">
+          <a href="registration.html">Login/Signup</a>
+          <a href="index.html">Browse</a>
+          <a href="messages.html">Messages</a>
+          <a href="profile.html">Profile</a>
+          <a href="cart.html">Cart</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="wooden-frame">
+      <div class="parchment-panel">
+        <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+        <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
+
+        <!-- search heading and bar -->
+        <section class="search-heading">
+          <h2>Browse Ye' Olde Catalog</h2>
+          <h3><em>Discover goods from merchants near and far.</em></h3>
+        </section>
+
+        <form class="catalog-search">
+          <input
+            type="text"
+            id="search"
+            name="searchbar"
+            placeholder="What are ya buying?"
+          />
+          <button type="submit" class="leather-button">Search</button>
+        </form>
+
+        <!-- search results -->
+        <section class="results-section">
+          <h3>Search Results</h3>
+
+          <ul class="search-results">
+            <!-- php will generate the product listings here -->
+          </ul>
+
+          <p class="results-message">
+            Product search will be available once the database is connected.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 Olde-Catalog</p>
+        <a href="support.html">Help & Support</a>
+      </div>
+    </footer>
+  </body>
+</html>

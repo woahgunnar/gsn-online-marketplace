@@ -27,6 +27,10 @@
   box-shadow: 0 3px 6px #63411e;
 }
 
+.catalog-section {
+  padding: 40px 0;
+}
+
 /* listings that will horizontally scroll */
 .browse-catalog {
   display: flex;

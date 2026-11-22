@@ -1,0 +1,47 @@
+/* search results section */
+.results-section {
+  margin-top: 40px;
+}
+
+.results-section h3 {
+  margin: 0 0 25px;
+  font-size: 30px;
+  color: #382415;
+}
+
+/* product results */
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* individual product results */
+.search-result {
+  flex: 0 0 210px;
+
+  padding: 20px;
+  background-color: #f0d6aa;
+  border: 2px solid #997446;
+  border-radius: 6px;
+
+  text-align: center;
+}
+
+/* product images */
+.search-result img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* placeholder message */
+.results-message {
+  margin-top: 25px;
+  color: #5b4029;
+  font-style: italic;
+}

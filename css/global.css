@@ -19,6 +19,12 @@ body {
   margin: 0;
 }
 
+h2 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
 /* profile picture */
 #pfp {
   width: 150px;
