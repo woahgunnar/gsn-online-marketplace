@@ -4,7 +4,7 @@ require "db.php";
 
 $search = $_GET["search"] ?? "";
 
-$sql = "SELECT * FROM items WHERE name LIKE :search";
+$sql = "SELECT * FROM products WHERE name LIKE :search";
 
 $stmt = $pdo->prepare($sql);
 

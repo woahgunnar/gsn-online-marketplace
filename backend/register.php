@@ -4,7 +4,8 @@ require "db.php";
 
 $username = $_POST["username"] ?? "";
 $email = $_POST["email"] ?? "";
-$password_hash = $_POST["password_hash"] ?? "";
+$password = $_POST["password"] ?? "";
+$password_hash = password_hash($password, PASSWORD_DEFAULT);
 $phone = $_POST["phone"] ?? "";
 $country = $_POST["country"] ?? "";
 $state = $_POST["state"] ?? "";
