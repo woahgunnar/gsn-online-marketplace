@@ -71,6 +71,19 @@ form.addEventListener("submit", function (event) {
   // Successful registration
   const enteredUsername = username.value.trim();
 
+  
+  document.getElementById("registrationForm").addEventListener("submit", async function(event){
+    event.preventDefault();
+    const formData = new FormData(this);
+    const response = await fetch("backend/register.php", {
+      method: "POST",
+      body: formData
+    });
+
+    const result = await response.text();
+
+    alert(result);
+  });
   showResponse(
     "Thou hast been Aſſayed as Gold and thy merit in filling out internet forms astounds! " +
       enteredUsername +
