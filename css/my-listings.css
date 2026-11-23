@@ -1,0 +1,20 @@
+.image-preview-container {
+    margin-top: 1rem;
+}
+
+#imagePreview {
+    display: block;
+    max-width: 100%;
+    max-height: 15rem;
+    object-fit: contain;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#imagePreview[hidden] {
+    display: none;
+}
+
+#previewMessage {
+    font-size: 0.9rem;
+}
