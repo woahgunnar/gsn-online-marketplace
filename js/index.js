@@ -3,32 +3,32 @@
 const recommended = [
   {
     name: "Goody gumdrops",
-    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    link: "index.html",
     img: "images/product-placeholder.gif",
   },
   {
     name: "Goober guts",
-    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    link: "index.html",
     img: "images/product-placeholder.gif",
   },
   {
     name: "Scooby Snacks",
-    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    link: "index.html",
     img: "images/product-placeholder.gif",
   },
   {
     name: "Krabby patty",
-    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    link: "index.html",
     img: "images/product-placeholder.gif",
   },
   {
     name: "Shrek bath water",
-    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    link: "index.html",
     img: "images/product-placeholder.gif",
   },
   {
     name: "placeholder",
-    link: "https://youtu.be/5SZYz7lZRRI?si=UeXtj2f7TKmv_wX2",
+    link: "index.html",
     img: "images/product-placeholder.gif",
   },
 ];
