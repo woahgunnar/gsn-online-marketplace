@@ -1,0 +1,96 @@
+<?php
+// if the user isn't logged in, take them to the login page
+session_start();
+
+if (!isset($_SESSION["user_id"])) {
+  header("Location: login.html");
+  exit();
+}
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!--
+    Milestone 2
+    Author: Gunnar Ashworth
+    File: profile.html
+    -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Gunnar Ashworth" />
+  <meta name="description" content="profile page for the user" />
+  <title>Olde-Catalog - Your Profile</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header-footer.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+</head>
+
+<body>
+  <!-- HEADER AND NAVIGATION -->
+  <header>
+    <div class="header-content">
+      <div class="logo-window">
+        <h1>
+          <a href="index.html"><img src="images/logo.webp" width="300" height="150" alt="logo" /></a>
+        </h1>
+      </div>
+
+      <!-- navigation menu -->
+      <nav aria-label="Main navigation">
+        <a href="login.html">Sign in</a>
+        <a href="index.html">Browse</a>
+        <a href="messages.html">Messages</a>
+        <a href="profile.php">Profile</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="wooden-frame">
+    <div class="parchment-panel">
+      <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+      <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
+
+      <!-- profile info container -->
+      <section class="profile-info">
+        <h2>Your Olde-Catalog Ledger</h2>
+
+        <!-- profile picture -->
+        <img src="images/default-pfp.png" id="pfp" alt="Current profile picture" />
+
+        <!-- profile details -->
+        <div class="profile-details">
+          <h3>
+            <?= htmlspecialchars($_SESSION["username"]) ?>
+          </h3>
+          <p>Marketplace Member</p>
+        </div>
+
+        <a href="edit-profile.php" class="leather-button"> Edit Profile </a>
+      </section>
+
+      <!-- nav menu for profile-related pages -->
+      <nav class="profile-navigation" aria-label="profile navigation">
+        <a href="purchases.html">Purchases</a>
+        <a href="my-listings.html">My Listings</a>
+        <a href="my-reviews.html">Reviews</a>
+        <a href="saved-items.html">Saved Items</a>
+      </nav>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Olde-Catalog</p>
+      <a href="support.html">Help & Support</a>
+    </div>
+  </footer>
+</body>
+
+</html>

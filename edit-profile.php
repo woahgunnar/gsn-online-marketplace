@@ -1,0 +1,136 @@
+<?php
+// if the user isn't logged in, take them to the login page
+session_start();
+
+if (!isset($_SESSION["user_id"])) {
+  header("Location: login.html");
+  exit();
+}
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!--
+    Milestone 2
+    Author: Gunnar Ashworth
+    File: edit-profile.html
+    -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Gunnar Ashworth" />
+  <meta name="description" content="profile settings page for the user" />
+  <title>Olde-Catalog - Edit Profile</title>
+
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header-footer.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/edit-profile.css" />
+
+  <script src="js/edit-profile.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER AND NAVIGATION -->
+  <header>
+    <div class="header-content">
+      <div class="logo-window">
+        <h1>
+          <a href="index.html"><img src="images/logo.webp" width="300" height="150" alt="logo" /></a>
+        </h1>
+      </div>
+
+      <!-- navigation menu -->
+      <nav aria-label="Main navigation">
+        <a href="login.html">Sign in</a>
+        <a href="index.html">Browse</a>
+        <a href="messages.html">Messages</a>
+        <a href="profile.php">Profile</a>
+        <a href="cart.html">Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="wooden-frame">
+    <div class="parchment-panel">
+      <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+      <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
+
+      <div class="settings-header">
+        <h2>Edit Your Ledger</h2>
+        <a href="profile.php" class="leather-button">Back</a>
+      </div>
+
+      <section class="profile-settings">
+        <div class="pfp-settings">
+          <strong>Profile picture</strong>
+          <img src="images/default-pfp.png" id="pfp" alt="Current profile picture" />
+        </div>
+
+        <div class="username-settings">
+          <strong>Username</strong>
+          <span id="username"><?= htmlspecialchars($_SESSION["username"]) ?></span>
+          <button type="button" id="change-username" class="leather-button">
+            Change
+          </button>
+        </div>
+      </section>
+
+      <!-- php code to display error messages for username changing -->
+      <?php
+      $status = $_GET["status"] ?? "";
+
+      $messages = [
+        "updated" => "Username updated successfully.",
+        "taken" => "That username is already taken.",
+        "invalid" => "Username must be 3-24 characters and contain only letters, numbers, and underscores.",
+        "error" => "Unable to update username. Please try again."
+      ];
+
+      if (isset($messages[$status])) {
+        echo '<p class="username-status">' .
+          htmlspecialchars($messages[$status]) .
+          '</p>';
+      }
+      ?>
+
+      <!-- pop up window for when the user wants to change their username -->
+      <!-- includes common restraints for usernames -->
+      <dialog id="username-dialog">
+        <div class="parchment-panel">
+          <img src="images/iron-rivet.png" class="nail-left" alt="nail" />
+          <img src="images/iron-rivet.png" class="nail-right" alt="nail" />
+          <h2>Change username</h2>
+
+          <form id="username-form" action="backend/change-username.php" method="post">
+            <label for="new-username">New username</label>
+            <input type="text" id="new-username" name="new_username" required minlength="3" maxlength="24"
+              pattern="^[a-zA-Z0-9_]+$" />
+
+            <!-- room to display message when username doesn't meet requirements -->
+            <p id="username-message"></p>
+
+            <button type="submit" id="confirm-username" class="leather-button">
+              Confirm
+            </button>
+            <button type="button" id="cancel-username" class="leather-button">
+              Back
+            </button>
+          </form>
+        </div>
+      </dialog>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Olde-Catalog</p>
+      <a href="support.html">Help & Support</a>
+    </div>
+  </footer>
+</body>
+
+</html>

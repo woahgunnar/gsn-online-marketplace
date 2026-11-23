@@ -3,16 +3,10 @@ const usernameForm = document.getElementById("username-form");
 const usernameMessage = document.getElementById("username-message");
 const newUsername = document.getElementById("new-username");
 const changeUsernameButton = document.getElementById("change-username");
-const confirmUsernameButton = document.getElementById("confirm-username");
 const cancelUsernameButton = document.getElementById("cancel-username");
 
 changeUsernameButton.addEventListener("click", function () {
   usernameDialog.showModal();
-});
-
-confirmUsernameButton.addEventListener("click", function () {
-  alert("Saving username changes is not available yet.");
-  usernameDialog.close();
 });
 
 cancelUsernameButton.addEventListener("click", function () {
