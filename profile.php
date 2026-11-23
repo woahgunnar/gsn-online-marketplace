@@ -77,7 +77,7 @@ if (!isset($_SESSION["user_id"])) {
       <!-- nav menu for profile-related pages -->
       <nav class="profile-navigation" aria-label="profile navigation">
         <a href="purchases.html">Purchases</a>
-        <a href="my-listings.html">My Listings</a>
+        <a href="my-listings.php">My Listings</a>
         <a href="my-reviews.html">Reviews</a>
         <a href="saved-items.html">Saved Items</a>
       </nav>
