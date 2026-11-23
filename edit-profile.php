@@ -29,6 +29,7 @@ if (!isset($_SESSION["user_id"])) {
   <link rel="stylesheet" href="css/edit-profile.css" />
 
   <script src="js/edit-profile.js" defer></script>
+  <script src="sessionExpiration.js"></script>
 </head>
 
 <body>

@@ -2,8 +2,6 @@
 
 require "db.php";
 
-header("Content-Type: application/json");
-
 $search = trim($_GET["search"] ?? "");
 
 if ($search === "") {
@@ -27,6 +25,29 @@ $stmt->execute([
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo json_encode($results);
+if (count($results) === 0) {
+    echo "<p>No products found.</p>";
+    exit;
+}
 
+foreach ($results as $item) {
+
+    $name = htmlspecialchars($item["name"]);
+    $description = htmlspecialchars($item["description"]);
+    $price = number_format($item["price"], 2);
+    $image = htmlspecialchars($item["image_url"]);
+
+    echo "
+        <li class='product-box'>
+            <img 
+                src='$image' 
+                alt='$name' 
+                class='product-image'
+            >
+            <h4>$name</h4>
+            <p>$description</p>
+            <p class='product-price'>$$price</p>
+        </li>
+    ";
+}
 ?>
