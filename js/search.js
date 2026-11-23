@@ -4,14 +4,24 @@ const results = document.getElementById("results");
 const resultsHeading = document.getElementById("results-heading");
 const resultsMessage = document.getElementById("results-message");
 
+let searchController;
+
 // Search database
 async function searchDatabase(search) {
+    if (searchController) {
+        searchController.abort();
+    }
+    searchController=new AbortController();
 
     try {
+        
         results.innerHTML = "";
         resultsMessage.textContent = "Searching...";
         const response = await fetch(
-            "backend/search.php?search=" + encodeURIComponent(search)
+            "backend/search.php?search=" + encodeURIComponent(search),
+            {
+                signal: searchController.signal
+            }
         );
 
         if (!response.ok) {
@@ -21,8 +31,8 @@ async function searchDatabase(search) {
         const data = await response.text();
         
         resultsHeading.textContent = `Search Results for "${search}"`;
-        resultsMessage.textContent = "";
         results.innerHTML = data;
+        resultsMessage.textContent = "";
         
         if (data.trim() === "") {
             resultsMessage.textContent = "No products found.";
