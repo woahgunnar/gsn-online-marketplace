@@ -48,10 +48,12 @@
         <!-- search heading and bar -->
         <section class="search-heading">
           <h2>Browse Ye' Olde Catalog</h2>
-          <h3><em>Discover goods from merchants near and far.</em></h3>
+          <h3>
+            <em>Discover goods from merchants near and far.</em>
+          </h3>
         </section>
 
-        <form class="catalog-search">
+        <form class="catalog-search" id="search-form">
           <input
             type="text"
             id="search"
@@ -63,13 +65,13 @@
 
         <!-- search results -->
         <section class="results-section">
-          <h3>Search Results</h3>
+          <h3 id="results-heading"> Search Results</h3>
 
-          <ul class="search-results">
+          <ul class="search-results" id="results">
             <!-- php will generate the product listings here -->
           </ul>
 
-          <p class="results-message">
+          <p class="results-message" id=results-message>
             Product search will be available once the database is connected.
           </p>
         </section>
