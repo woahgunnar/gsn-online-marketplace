@@ -16,7 +16,7 @@ function showResponse(message) {
 }
 
 // Validate form submission
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
   // Prevent page reload
   event.preventDefault();
 
@@ -72,24 +72,27 @@ form.addEventListener("submit", function (event) {
   const enteredUsername = username.value.trim();
 
   
-  document.getElementById("registrationForm").addEventListener("submit", async function(event){
-    event.preventDefault();
+    try {
     const formData = new FormData(this);
-    const response = await fetch("backend/register.php", {
+
+    const result = await fetch("backend/register.php", {
       method: "POST",
       body: formData
     });
 
-    const result = await response.text();
+    const message = await result.text();
 
-    alert(result);
-  });
-  showResponse(
-    "Thou hast been Aſſayed as Gold and thy merit in filling out internet forms astounds! " +
-      enteredUsername +
-      ", we welcome thee to our Kingdom!!!",
-  );
+    if (!result.ok) {
+      showResponse(message);
+      return;
+    }
 
-  // Reset form after successful submission
+  showResponse(message);
+
   form.reset();
+
+} catch(error) {
+  console.error(error);
+  showResponse("Unable to connect to the server.");
+}
 });
