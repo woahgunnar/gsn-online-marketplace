@@ -4,6 +4,12 @@ const results = document.getElementById("results");
 const resultsHeading = document.getElementById("results-heading");
 const resultsMessage = document.getElementById("results-message");
 
+console.log("Search Input:", searchInput);
+console.log("Search Form:", searchForm);
+console.log("Results:", results);
+console.log("Results Heading:", resultsHeading);
+console.log("Results Message:", resultsMessage);
+
 // Search database
 async function searchDatabase(search) {
 
