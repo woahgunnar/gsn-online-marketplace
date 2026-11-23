@@ -5,7 +5,6 @@ require "db.php";
 $search = trim($_GET["search"] ?? "");
 
 if ($search === "") {
-    echo json_encode([]);
     exit;
 }
 
@@ -26,7 +25,6 @@ $stmt->execute([
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if (count($results) === 0) {
-    echo "<p>No products found.</p>";
     exit;
 }
 
