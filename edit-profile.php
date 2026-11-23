@@ -78,6 +78,11 @@ if (!isset($_SESSION["user_id"])) {
         </div>
       </section>
 
+      <!-- logout button -->
+      <form class="logout-form" action="backend/logout.php" method="post">
+        <button type="submit" class="leather-button">Log out</button>
+      </form>
+
       <!-- php code to display error messages for username changing -->
       <?php
       $status = $_GET["status"] ?? "";

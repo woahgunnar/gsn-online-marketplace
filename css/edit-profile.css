@@ -77,3 +77,9 @@ dialog::backdrop {
   padding: 10px;
   font: inherit;
 }
+
+.logout-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
