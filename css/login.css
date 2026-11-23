@@ -60,3 +60,7 @@
 button {
   width: 150px;
 }
+
+#login-error {
+  text-align: center;
+}
