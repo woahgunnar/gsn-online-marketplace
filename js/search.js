@@ -4,12 +4,6 @@ const results = document.getElementById("results");
 const resultsHeading = document.getElementById("results-heading");
 const resultsMessage = document.getElementById("results-message");
 
-console.log("Search Input:", searchInput);
-console.log("Search Form:", searchForm);
-console.log("Results:", results);
-console.log("Results Heading:", resultsHeading);
-console.log("Results Message:", resultsMessage);
-
 // Search database
 async function searchDatabase(search) {
 
@@ -24,47 +18,15 @@ async function searchDatabase(search) {
           throw new Error("Failed to retrieve search results");
         }
 
-        const data = await response.json();
+        const data = await response.text();
         
         resultsHeading.textContent = `Search Results for "${search}"`;
         resultsMessage.textContent = "";
+        results.innerHTML = data;
         
-        
-        if (data.length === 0) {
+        if (data.trim() === "") {
             resultsMessage.textContent = "No products found.";
-            return;
         }
-
-        data.forEach(item => {
-          const productBox = document.createElement("li");
-          productBox.classList.add("product-box");
-
-
-          const productImage = document.createElement("img");
-          productImage.src = item.image_url;
-          productImage.alt = item.name;
-          productImage.classList.add("product-image");
-
-
-          const productName = document.createElement("h4");
-          productName.textContent = item.name;
-
-
-          const productDescription = document.createElement("p");
-          productDescription.textContent = item.description;
-
-
-          const productPrice = document.createElement("p");
-          productPrice.textContent = "$" + Number(item.price).toFixed(2);
-          productPrice.classList.add("product-price");
-
-
-          productBox.appendChild(productImage);
-          productBox.appendChild(productName);
-          productBox.appendChild(productDescription);
-          productBox.appendChild(productPrice);
-          results.appendChild(productBox);
-        });
 
     } catch (error) {
         console.error("Search error:", error);
