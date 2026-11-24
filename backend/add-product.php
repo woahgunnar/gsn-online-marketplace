@@ -7,13 +7,13 @@ require_once 'db.php';
 
 //ensure user log in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.html");
+    header("Location: ../login.html");
     exit();
 }
 
 //ONLY accept POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header("Location: my-listings.php");
+    header("Location: ../my-listings.php");
     exit();
 }
 
@@ -31,19 +31,19 @@ if (
     $name === '' ||
     mb_strlen($name) > 255
 ) {
-    header("Location: my-listings.php?error=1");
+    header("Location: ../my-listings.php?error=1");
     exit();
 }
 
 //Validate price (Can't have you make TOO much money now)
 if (!preg_match('/^\d{1,8}(\.\d{1,2})?$/', $price)) {
-    header("Location: my-listings.php?error=1");
+    header("Location: ../my-listings.php?error=1");
     exit();
 }
 
 //Validate uploaded image URL length
 if (strlen($imageURL) > 255) {
-    header("Location: my-listings.php?error=1");
+    header("Location: ../my-listings.php?error=1");
     exit();
 }
 
@@ -56,7 +56,7 @@ if (
     !isset($urlParts['scheme'], $urlParts['host']) ||
     strtolower($urlParts['scheme']) !== 'https'
 ) {
-    header("Location: my-listings.php?error=1");
+    header("Location: ../my-listings.php?error=1");
     exit();
 }
 
@@ -79,14 +79,14 @@ try {
     ]);
 
     // Redirect after successful insertion
-    header("Location: my-listings.php?success=1");
+    header("Location: ../my-listings.php?success=1");
     exit();
 
 } catch (PDOException $e) {
 
     error_log($e->getMessage());
 
-    header("Location: my-listings.php?error=1");
+    header("Location: ../my-listings.php?error=1");
     exit();
 }
 
